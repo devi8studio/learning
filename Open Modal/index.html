@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  </style>
+</head>
+<body>
+  <button id="openModalButton">Open modal</button>
+  <dialog id="modal" class="p-4 max-w-sm space-y-4">
+    <h1 class="text-2xl font-bold">Lorem ipsum dolor sit amet.</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate quaerat, aperiam aspernatur voluptatem numquam obcaecati. Itaque distinctio dolore rerum nulla!</p>
+    <button id="closeModalButton" class="px-4 py-2 bg-gray-200">Close modal</button>
+  </dialog>
+  <script>
+    const modal = document.querySelector('#modal');
+    const openModalButton = document.querySelector('#openModalButton');
+    const closeModalButton = modal.querySelector('#closeModalButton');
+    openModalButton.addEventListener('click', function(){
+      modal.showModal()
+    })
+    closeModalButton.addEventListener('click', function(){
+      modal.close()
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="./main.js"></script>
+  <style>
+    .fade-in {
+      opacity: 0;
+      transition: opacity 250ms ease-in;
+    }
+    .fade-in.appear {
+      opacity: 1;
+    }
+    .from-left {
+      transform: translateX(-50%)
+    }
+    .from-right {
+      transform: translateX(50%)
+    }
+    .from-left,
+    .from-right {
+      transition: opacity 250ms ease-in, transform 250ms ease-in;
+      opacity: 0;
+    }
+    .from-left.appear,
+    .from-right.appear {
+      transform: translateX(0);
+      opacity: 1
+    }
+    .navigation {
+      transition: background 250ms ease-in;
+
+    }
+    .navigation.has-scrolled {
+      background: #fff;
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden">
+  <nav class="fixed top-0 inset-x-0 h-16 p-4 space-x-4 navigation z-10">
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+  </nav>
+  <section id="section1" class="w-screen h-screen bg-gray-200"></section>
+  <section class="grid grid-cols-3 gap-4 py-16">
+    <div class="p-4 space-y-2 fade-in">
+      <h1 class="text-2xl font-semibold">Lorem ipsum dolor sit amet.</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi dolores inventore consectetur pariatur a tempore aut vel et corporis iure!</p>
+    </div>
+    <div class="p-4 space-y-2 fade-in">
+      <h1 class="text-2xl font-semibold">Lorem ipsum dolor sit amet.</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi dolores inventore consectetur pariatur a tempore aut vel et corporis iure!</p>
+    </div>
+    <div class="p-4 space-y-2 fade-in">
+      <h1 class="text-2xl font-semibold">Lorem ipsum dolor sit amet.</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi dolores inventore consectetur pariatur a tempore aut vel et corporis iure!</p>
+    </div>
+  </section>
+  <section class="w-screen h-screen bg-gray-200 grid grid-cols-2 gap-4 py-16 px-4">
+    <div class="bg-white from-left slide-in"></div>
+    <div class="px-4 flex items-center from-right slide-in">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit quod esse aliquid eligendi cupiditate delectus a consequatur deleniti quasi optio debitis autem quia aspernatur possimus itaque, hic nam iste exercitationem. Fugit nobis accusantium voluptates libero delectus, necessitatibus autem soluta et, cumque optio perspiciatis, nulla eveniet in praesentium a veniam deserunt veritatis! Harum voluptate quas modi optio animi atque, suscipit voluptas unde praesentium quis ex excepturi eius exercitationem molestiae qui nulla provident! Vero numquam rerum culpa molestiae repellat omnis dolore soluta sint repudiandae, incidunt officiis repellendus natus minima excepturi pariatur, mollitia, enim ea? Unde error architecto natus impedit rem minus dolorum?</p>
+    </div>
+  </section>
+  <section class="w-screen h-screen bg-white"></section>
+</body>
+</html>
